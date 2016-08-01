@@ -1,0 +1,90 @@
+<!-- A mashup of Google Maps and Google News. -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+
+        <!-- app's own CSS -->
+        <link href="css/styles.css" rel="stylesheet"/>
+
+        <!-- https://developers.google.com/maps/documentation/javascript/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIO4i62BxqU8mFl5G-1e8funT5u72VN1I"></script>
+
+        <!-- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/ -->
+        <script src="js/markerwithlabel_packed.js"></script>
+
+        <!-- http://jquery.com/ -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+
+        <!-- http://getbootstrap.com/ -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- http://underscorejs.org/ -->
+        <script src="js/underscore-min.js"></script>
+
+        <!-- https://github.com/twitter/typeahead.js/ -->
+        <script src="js/typeahead.jquery.min.js"></script>
+
+        <!-- app's own JavaScript -->
+        <script src="js/scripts.js"></script>
+        
+        <!--google material design icon font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <title>Mashup</title>
+
+    </head>
+    <body>
+
+        <!-- fill viewport -->
+        <div class="container-fluid">
+
+            <!-- https://developers.google.com/maps/documentation/javascript/tutorial -->
+            <div id="map-canvas"></div>
+
+            <!-- http://getbootstrap.com/css/#forms -->
+            <form class="form-inline" id="form" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="q">City, State, Postal Code</label>
+                    <input class="form-control" id="q" placeholder="City, State, Postal Code" type="text"/>
+                    <!--car icon-->
+                    <!--<button type="button" class="btn btn-default">-->
+                        <i class="material-icons" id="car">directions_car</i>
+                    <!--</button>-->
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
+
+<!--
+material icons: 
+.hover:
+    -if class="roads-hidden", label: display roads. 
+    (icon will be dark)
+    -if not class="roads-hidden," label: hide roads
+    (icon will be low-opacity)
+and leaves (stop showing label)
+https://api.jquery.com/hover/
+
+click, when click, toggle class
+    -if roads-hidden, when click, remove class="roads-hidden"
+     (icon will be dark)
+    -if roads not hidden, when click, add class="roads-hidden"
+    (icon will be low-opacity)
+
+
+<i class="material-icons icon-button" id="road_toggle" >directions_car</i>
+
+
+<button class="btn btn-default" type="submit">
+                        <span aria-hidden="true" class="glyphicon glyphicon-log-in"></span>
+                        // <a href="index.php">Return to homepage</a> 
+                    </button>
+                    
+-->
